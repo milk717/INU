@@ -1,11 +1,11 @@
 #‘ ’, ‘A’, ‘B’, ‘C’, …, ‘X’, ‘Y’, ‘Z’, ‘a’, ‘b’, ‘c’, …, ‘x’, ‘y’, ‘z’
 def encipher(p, k):
     a = ord(p)
-    if 64<a<91:
+    if 64<a<91: #대문자인 경우
         a = a + 6
-    if a == 32:
+    if a == 32: #공백인 경우
         a = 70
-    t = a + k
+    t = a + k   #암호화
     if t > 122:
         t = t - 53
     if t == 70:
